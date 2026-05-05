@@ -1,0 +1,53 @@
+@use '@angular/material' as mat;
+@use './styles/theme_theme-colors' as trouve;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: trouve.$primary-palette,
+
+        tertiary: trouve.$tertiary-palette,
+        theme-type: dark,
+      ),
+      typography: (
+        brand-family: '"Cormorant Garamond", serif',
+        plain-family: '"DM Sans", sans-serif',
+      ),
+      density: 0,
+    )
+  );
+
+  @include mat.theme-overrides(
+    (
+      // Surfaces
+      background: #111e17,
+      surface: #1c2d24,
+      surface-container: #2a3d32,
+      surface-container-high: #3d5a48,
+      surface-container-highest: #3d5a48,
+      surface-container-low: #1c2d24,
+      surface-container-lowest: #111e17,
+      // Text
+      on-surface: #e8dcc8,
+      on-surface-variant: #6b7c72,
+      // Accent / Brand
+      tertiary: #c9a86c,
+      on-tertiary: #1c2d24,
+    )
+  );
+
+  @media (prefers-contrast: more) {
+    @include trouve.high-contrast-overrides(dark);
+  }
+}
+
+body {
+  color-scheme: dark;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  height: 100%;
+}
