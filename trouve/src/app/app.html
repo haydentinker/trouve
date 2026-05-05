@@ -1,8 +1,15 @@
-<div class="flex flex-col items-center justify-center min-h-screen gap-6">
-  <!-- Material button — confirms Angular Material is working -->
-  <button mat-flat-button>Hello from Material</button>
-
-  <!-- Tailwind class — confirms Tailwind is working -->
-  <p class="text-3xl font-bold text-primary">Hello from Tailwind</p>
+<div class="flex flex-col h-screen">
+  <app-header></app-header>
+  <mat-sidenav-container class="flex-1">
+    <mat-sidenav
+      class="w-56"
+      [mode]="layout.isMobile() ? 'over' : 'side'"
+      [opened]="layout.isOpen()"
+      (openedChange)="layout.isOpen.set($event)">
+      <app-side-nav></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="p-6">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
-<router-outlet />

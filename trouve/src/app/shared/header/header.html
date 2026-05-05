@@ -1,0 +1,21 @@
+<div>
+  <mat-toolbar class="flex flex-row items-center">
+    @if (layout.isMobile()) {
+      <button mat-icon-button (click)="layout.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    }
+    <span class="text-xl font-semibold">Trouvé</span>
+    <span class="flex-1"></span>
+    <mat-chip-set>
+      <mat-chip>AI Ready</mat-chip>
+    </mat-chip-set>
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-divider />
+</div>

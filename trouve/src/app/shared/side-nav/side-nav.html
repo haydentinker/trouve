@@ -1,0 +1,44 @@
+<div class="flex flex-col h-full">
+  <mat-nav-list class="flex-1 overflow-y-auto">
+    <div class="flex flex-col items-center py-2">
+      <p class="self-start px-4 text-sm font-medium">Main</p>
+      <a mat-list-item routerLink="/new-scan" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>document_scanner</mat-icon>
+        <span class="nav-label" matListItemTitle>New Scan</span>
+      </a>
+      <a mat-list-item routerLink="/scan-history" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>history</mat-icon>
+        <span class="nav-label" matListItemTitle>Scan History</span>
+      </a>
+      <a mat-list-item routerLink="/saved" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>bookmark</mat-icon>
+        <span class="nav-label" matListItemTitle>Saved</span>
+      </a>
+      <a mat-list-item routerLink="/outfit-builder" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>styler</mat-icon>
+        <span class="nav-label" matListItemTitle>Outfit Builder</span>
+      </a>
+
+      <p class="self-start px-4 text-sm font-medium mt-4">Insights</p>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>show_chart</mat-icon>
+        <span class="nav-label" matListItemTitle>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/market-trends" routerLinkActive="active-nav-item">
+        <mat-icon class="nav-icon" matListItemIcon>trending_up</mat-icon>
+        <span class="nav-label" matListItemTitle>Market Trends</span>
+      </a>
+    </div>
+  </mat-nav-list>
+
+  <div class="shrink-0">
+    <mat-divider />
+    <div class="flex flex-row gap-4 items-center px-4 py-2">
+      <mat-icon matListItemIcon>account_circle</mat-icon>
+      <div>
+        <p class="text-secondary text-xl">Hayden Tinker</p>
+        <p class="text-sm text-on-surface-variant">Pro Member</p>
+      </div>
+    </div>
+  </div>
+</div>

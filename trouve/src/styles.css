@@ -44,3 +44,52 @@
   --color-shadow: var(--mat-sys-shadow);
   --color-scrim: var(--mat-sys-scrim);
 }
+
+:root {
+  --trouve-gold: #c9a86c;
+  --trouve-gold-light: #dfc08a;
+  --trouve-gold-tint: rgba(201, 168, 108, 0.1);
+  --trouve-parchment: #c8b898;
+}
+
+mat-nav-list {
+  --mat-list-list-item-container-shape: 0px;
+}
+
+mat-nav-list .mat-mdc-list-item,
+mat-nav-list .mat-mdc-list-item::before,
+mat-nav-list .mat-mdc-list-item::after,
+mat-nav-list .mat-mdc-list-item .mdc-list-item__ripple::before,
+mat-nav-list .mat-mdc-list-item .mdc-list-item__ripple::after {
+  border-radius: 0 !important;
+}
+
+.nav-icon {
+  color: var(--trouve-parchment);
+  opacity: 0.8;
+}
+
+.nav-label {
+  color: var(--trouve-parchment);
+}
+
+.active-nav-item {
+  background-color: var(--trouve-gold-tint) !important;
+  border-radius: 0 !important;
+  border-left: 3px solid var(--trouve-gold);
+}
+
+.active-nav-item .nav-icon {
+  color: var(--trouve-gold-light) !important;
+  opacity: 1 !important;
+}
+
+.active-nav-item .nav-label {
+  color: var(--trouve-gold-light) !important;
+}
+
+mat-sidenav {
+  --mat-sidenav-container-shape: 0px;
+  border-right: 1px solid var(--mat-sys-outline-variant) !important;
+  box-shadow: none !important;
+}

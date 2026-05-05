@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HeaderComponent } from './shared/header/header';
+import { SideNav } from './shared/side-nav/side-nav';
+import { LayoutService } from './core/layout.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MatSidenavModule, HeaderComponent, SideNav],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('trouve');
+  layout = inject(LayoutService);
 }
